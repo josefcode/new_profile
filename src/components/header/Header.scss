@@ -1,0 +1,31 @@
+.header {
+  position: relative;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  nav {
+    display: grid;
+    z-index: 100;
+    grid-template-columns: repeat(3, 80px);
+    padding-block: 1rem;
+    width: 1140px;
+    margin: auto;
+    text-transform: uppercase;
+
+    a {
+      color: #b8001f;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+  }
+
+  @media (max-width: 760px) {
+    nav {
+      width: 100%;
+      padding-inline: 1rem;
+
+      font-size: 0.75rem;
+    }
+  }
+}
