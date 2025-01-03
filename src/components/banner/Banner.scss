@@ -1,79 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
 
 .banner-container {
-  position: relative;
-
-  .banner-content {
-    position: absolute;
-    z-index: 1;
-    background-color: var(--tertiary-color);
-  }
 
   @media (max-width: 760px) {
     .item-img {
-      margin-top: -3.2rem;
-
-      width: 100vw;
-      height: 300px;
-      object-fit: cover;
-    }
-
-    .item-second-image {
-      position: absolute;
-      top: -30px;
-      left: 45px;
-      max-width: 80%;
-      max-width: 80%;
-      filter: blur(10px); // Initial blur state
-      animation: showImage 0.5s ease-in-out 0.3s forwards;
-    }
-
-    @keyframes showImage {
-      0% {
-        filter: blur(10px); // Start fully blurred
-      }
-      100% {
-        filter: blur(0); // End with no blur
-      }
-    }
-
-    .item-third-image {
-      position: absolute;
-      top: -35px;
-      left: 50px;
-      max-width: 80%;
-      max-width: 80%;
-      filter: blur(10px); // Initial blur state
-      animation: showImage 0.5s ease-in-out 0.3s forwards;
-    }
-
-    .banner-content {
-      background-color: var(--tertiary-color);
       width: 100%;
-      margin-top: -10px;
-      padding-inline: 1rem;
-      padding-block: 1rem;
-
-      .banner-name {
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: 900;
-        color: var(--secondary-color);
-      }
-
-      .banner-profission {
-        font-family: "Cinzel Decorative";
-        font-size: 2.5rem;
-        text-align: center;
-        color: var(--primary-color);
-      }
-
-      .banner-title {
-        text-align: center;
-        color: var(--secondary-color);
-        font-size: 400;
-        letter-spacing: 1px;
-      }
+      height: 100%;
     }
   }
 }
