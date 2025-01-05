@@ -1,22 +1,28 @@
 .header {
-  position: relative;
-  z-index: 100;
-  display: grid;
-  grid-template-columns: 1fr;
+  // position: relative;
+  // z-index: 100;
+  // display: grid;
+  // grid-template-columns: 1fr;
 
   nav {
     display: grid;
-    z-index: 100;
     grid-template-columns: repeat(3, 80px);
     padding-block: 1rem;
     width: 1140px;
     margin: auto;
     text-transform: uppercase;
+    align-items: center;
 
     a {
       color: #b8001f;
       font-weight: 900;
       letter-spacing: 2px;
+    }
+    .menu-btn {
+      display: none;
+    }
+    svg {
+      display: none;
     }
   }
 
@@ -24,8 +30,51 @@
     nav {
       width: 100%;
       padding-inline: 1rem;
-
       font-size: 0.75rem;
+
+      grid-template-columns: repeat(2, auto);
+      justify-content: space-between;
+
+      .logo {
+        font-size: 2rem;
+        text-decoration: none;
+      }
+
+      .link {
+        display: none;
+      }
+
+      svg {
+        display: inline;
+        stroke: var(--denary-color);
+        width: 35px;
+        height: 35px;
+      }
+
+      .menu-btn {
+        display: inline;
+        background-color: transparent;
+        border: unset;
+      }
+    }
+    .show {
+      background-color: var(--secondary-color);
+      width: 100vw;
+      height: auto;
+      position: absolute;
+      z-index: 1000;
+      transition: 1s ease-in-out;
+      display: grid;
+      gap: 1rem;
+      padding: 1rem;
+      box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+      a {
+        color: #b8001f;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-decoration: none;
+      
+      }
     }
   }
 }
