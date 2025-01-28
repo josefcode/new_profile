@@ -1,22 +1,24 @@
 .header {
-  // position: relative;
-  // z-index: 100;
-  // display: grid;
-  // grid-template-columns: 1fr;
-
   nav {
     display: grid;
-    grid-template-columns: repeat(3, 80px);
+    grid-template-columns: repeat(2, auto);
     padding-block: 1rem;
     width: 1140px;
     margin: auto;
     text-transform: uppercase;
     align-items: center;
+    justify-content: space-between;
+    .menu-desktop {
+      align-self: flex-end;
+      display: grid;
+      grid-template-columns: repeat(2, 100px);
+    }
 
     a {
       color: #b8001f;
       font-weight: 900;
       letter-spacing: 2px;
+      text-decoration: none;
     }
     .menu-btn {
       display: none;
@@ -31,9 +33,12 @@
       width: 100%;
       padding-inline: 1rem;
       font-size: 0.75rem;
-
       grid-template-columns: repeat(2, auto);
       justify-content: space-between;
+
+      .menu-desktop {
+        display: none;
+      }
 
       .logo {
         font-size: 2rem;
@@ -73,7 +78,6 @@
         font-weight: 900;
         letter-spacing: 2px;
         text-decoration: none;
-      
       }
     }
   }

@@ -1,21 +1,31 @@
 .title-cards {
-  margin-top: 150px;
-  padding-inline: 1rem;
+  padding-block-start: 2rem;
+  width: 1140px;
+  margin: 0 auto;
   color: var(--primary-color);
+
+  @media (max-width: 760px) {
+   padding-inline: 1rem;
+  }
 }
 
 .image-toroid {
   padding-bottom: 1rem;
   display: grid;
   justify-content: flex-end;
+  animation: breathIcons 2s ease-in-out infinite;
+
+  .image-toroid-img {
+    width: 150px;
+    height: 150px;  
+  }
 
   @media (max-width: 760px) {
     padding-inline: 1rem;
     margin-top: 10px;
     .image-toroid-img {
       width: 100px;
-      height: 100px;
-      animation: breathIcons 2s ease-in-out infinite;
+      height: 100px;  
     }
   }
 
@@ -33,54 +43,68 @@
 }
 
 .image-cube {
+
+  .image-cube-img {
+    width: 150px;
+    height: 150px;
+    animation: breathIcons 2s ease-in-out infinite;
+    margin-block: 20px;
+
+  }
   @media (max-width: 760px) {
     padding-inline: 1rem;
     margin-block: 20px;
     .image-cube-img {
       width: 100px;
       height: 100px;
-      animation: breathIcons 2s ease-in-out infinite;
     }
   }
 }
 
 .cards-container {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 350px);
-  gap: 25px;
-  overflow-x: scroll;
-}
+  gap: 30px;
+  width: 1140px;
+  margin: 0 auto;
+  .card-subtitle {
+    position: absolute;
+    top: 200px;
+    z-index: 1;
+    padding-inline: 1rem;
+    color: var(--secondary-color);
+  }
+  .card-title {
+    position: absolute;
+    top: 220px;
+    width: 200px;
+    z-index: 1;
+    padding-inline: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+  }
 
-.card-container {
-  position: relative;
-
+  .principale-image {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    filter: brightness(60%);
+  }
   @media (max-width: 760px) {
+   
+    grid-template-columns: repeat(3, 300px);
+    gap: 15px;
     width: 100%;
     padding-inline: 1rem;
+    overflow-x: scroll;
 
-    .card-subtitle {
-      position: absolute;
-      top: 200px;
-      z-index: 1;
-      padding-inline: 1rem;
-      color: var(--secondary-color);
+      .principale-image {
+        width: 300px;
+        height: 400px;
+      }
     }
-
-    .card-title {
-      position: absolute;
-      top: 220px;
-      width: 200px;
-      z-index: 1;
-      padding-inline: 1rem;
-      font-size: 2rem;
-      text-transform: uppercase;
-      color: var(--secondary-color);
-    }
-    .principale-image {
-      width: 350px;
-      height: 450px;
-      object-fit: cover;
-      filter: brightness(60%);
-    }
-  }
 }
+
+

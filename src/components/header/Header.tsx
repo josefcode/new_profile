@@ -11,9 +11,10 @@ const Header = () => {
     <header className="header">
      
       <nav>
-        <NavLink to={RoutesUrls.BASE_URL} className="logo">
+        <NavLink to={RoutesUrls.BASE_URL} className="logo" onClick={() => setIsOpen(false)}>
           A
         </NavLink>
+        <div className="menu-desktop">
         <NavLink to={RoutesUrls.BASE_URL} aria-label="home" className="link"  >
           Home
         </NavLink>
@@ -24,6 +25,7 @@ const Header = () => {
         >
           About
         </NavLink>
+        </div>
         <button className = 'menu-btn' onClick={() => setIsOpen(!isOpen)}>
           <IconMenu2 />
         </button>
